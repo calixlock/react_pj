@@ -5,12 +5,12 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
-  // document.getElementById("root")
+  // document.getElementById("root") // public 폴더의 index.html의 id가 root인 태그 찾아 실행
   document.querySelector("#root"),
 );
 root.render(
   // <React.StrictMode>
-  <App />,
+  <App />, // jsx 문법
   // </React.StrictMode>
 );
 

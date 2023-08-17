@@ -12,6 +12,7 @@ import "./App.css";
 // (5-1) 내부에 적기
 // (5-2) 외부 파일에 적기 > App.css파일 활용
 // (5-3) 라이브러리 사용(bootstrap / component-styled)
+// (6) 반복
 
 let a = 12;
 const b = 13;
@@ -24,6 +25,7 @@ function App() {
   const mystyle = {
     color: "red",
   };
+  let lit = [1, 2, 3];
 
   return (
     <div>
@@ -38,10 +40,18 @@ function App() {
         <br />a = {b} , b type = {typeof a}
       </div>
       <hr />
-      {/* (3) */}
+      {/* (3) 삼항연산 */}
       <div>삼항연산 a = b ? {a === b ? "같다" : "틀리다"}</div>
-      {/* (4) */}
+      {/* (4) 조건연산/참 */}
       <div>조건부 렌더링 {a === b && "a와 b는 같다"}</div>
+      {/* (5) 반복 */}
+      <div>
+        <div>
+          {lit.map((n) => (
+            <h2>{n}</h2>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

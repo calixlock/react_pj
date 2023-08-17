@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 깊은 복사 > 참조가 아닌
+        // concat filter map slice spread연산
+        const a = [1, 2, 3];
+
+        console.log('================ 1. spread / 복사 or 다중배열 빼내기')
+        const b = [...a]
+        console.log(`b = ${b}`);
+        b.push(4);
+        console.log(`b = ${b}`);
+
+
+        console.log('================ 2. concat / 데이터 추가')
+        const b1 = [0, ...a, 4];
+        console.log(`b1 = ${b1}`);
+        let b2 = a.concat();
+        console.log(`b2 = ${b2}`);
+        b2 = b2.concat(4);
+        console.log(`b2 = ${b2}`);
+
+        console.log('================ 3. filter / 데이터 삭제')
+        const b3 = a.filter((n) => { return n != 1 });
+        console.log(`b3 = ${b3}`);
+
+        console.log('================ 4. slice / 데이터 잘라내기')
+        const a4 = [1, 2, 3, 4];
+        const b4 = a4.slice(0, 2);
+        console.log(`b4 = ${b4}`);
+        const c4 = [0, ...b4, 4];
+        console.log(`c4 = ${c4}`);
+
+        console.log('================ 5. forEach / 반복 > for반복 사용x')
+        const a5 = [1, 2, 3, 4, 5];
+        //a5.forEach((n) => { console.log(n) }); // 리턴 x > 저장 x
+        const b5 = a5.map((n) => n + 1); // [...a5]
+        console.log(`b5 = ${b5}`);
+
+
+    </script>
+</body>
+
+</html>
