@@ -45,6 +45,35 @@
         const b5 = a5.map((n) => n + 1); // [...a5]
         console.log(`b5 = ${b5}`);
 
+        const users = [
+            {
+                id: 1,
+                name: "John",
+                phone: "1111",
+            },
+            {
+                id: 2,
+                name: "Kim",
+                phone: "2222",
+            },
+            {
+                id: 3,
+                name: "Song",
+                phone: "3333",
+            },
+        ];
+        const updateUserDto = {
+            id: 2,
+            name: "changed"
+        }
+        /* 얕은 복사
+        users[1].name = updateUserDto.name;
+        console.log(users);
+        */
+        //const updateUser = [...users, updateUserDto]
+        const updateUser = users.map(u => u.id === updateUserDto.id ? { ...u, ...updateUserDto } : u);
+        console.log(updateUser);
+        //console.log(`updateUser = ${updateUser}`);
 
     </script>
 </body>
