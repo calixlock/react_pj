@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Counter from "./pages/Counter";
 import Home from "./pages/Home";
 import Input from "./pages/Input";
+import Input2 from "./pages/Input2";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         {/* <a href="/">Home</a> 동일 */}
         {/* Link는 a태그로 변환 적용 */}
         <Link to="/">Home</Link> | <Link to="/about">About</Link> |{" "}
-        <Link to="/Counter">Counter</Link> | <Link to="/Input">Input</Link>
+        <Link to="/Counter">Counter</Link> | <Link to="/Input">Input</Link> |{" "}
+        <Link to="/Input2">Input2</Link>
       </nav>
       <hr />
       <Routes>
@@ -25,6 +27,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/Counter" element={<Counter />} />
         <Route path="/Input" element={<Input />} />
+        <Route path="/Input2" element={<Input2 />} />
       </Routes>
       <hr />
     </div>
