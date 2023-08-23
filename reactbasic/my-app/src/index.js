@@ -4,11 +4,17 @@ import App from "./App"; // render에 사용되는 src/App.js 불러오기
 import "./index.css"; // index의 css 속성
 import reportWebVitals from "./reportWebVitals"; // 웹 퍼포먼스 콘솔 출력 라이브러리
 
+import { BrowserRouter } from "react-router-dom"; // 라우터 기능 적용
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // public/index.html에서 태그 id = root에 렌더링 됨
   // <React.StrictMode>
-  <App /> //App.js 내용 반영
+  // 라우터 적용
+  <BrowserRouter>
+    <App /> {/*<주석> App.js 내용 반영*/}
+  </BrowserRouter>
+
   // </React.StrictMode>
 );
 
