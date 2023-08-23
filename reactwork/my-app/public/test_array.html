@@ -71,9 +71,13 @@
         console.log(users);
         */
         //const updateUser = [...users, updateUserDto]
-        const updateUser = users.map(u => u.id === updateUserDto.id ? { ...u, ...updateUserDto } : u);
+
+        // json 데이터 수정
+        const updateUser = users
+            .map(u => u.id === updateUserDto.id ? { ...u, ...updateUserDto } : u);
+        // filter 사용시 추출
         console.log(updateUser);
-        //console.log(`updateUser = ${updateUser}`);
+
 
     </script>
 </body>

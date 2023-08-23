@@ -3,19 +3,16 @@ import "./App.css";
 import Sub from "./Sub";
 
 function App() {
-  // let num = 1; // 상태값 아닌 상태
-  const [num, setNum] = useState(1); // react의 hooks 라이브러리 > 상태값 사용
-  const add = () => {
-    setNum(num + 1); // react num 값 변경 요청 > return값 다시 호출됨
-    console.log(`num3 : ${num}`);
-  };
+  // 다운로드 받은 유저의 데이터 상태
+  const [users, setUsers] = useState([]);
+  const download = () => {};
 
   // 랜더링 시점 = 상태값 변경
   return (
     <div>
       <div>
-        <h1>숫자 : {num} </h1>
-        <button onClick={add}>+</button>
+        <h1>Test page</h1>
+        <button onClick={download}>Download</button>
       </div>
       <div>
         <Sub />
