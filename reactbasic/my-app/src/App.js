@@ -7,6 +7,7 @@ import Counter from "./pages/Counter";
 import Home from "./pages/Home";
 import Input from "./pages/Input";
 import Input2 from "./pages/Input2";
+import List from "./pages/List";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         {/* Link는 a태그로 변환 적용 */}
         <Link to="/">Home</Link> | <Link to="/about">About</Link> |{" "}
         <Link to="/Counter">Counter</Link> | <Link to="/Input">Input</Link> |{" "}
-        <Link to="/Input2">Input2</Link>
+        <Link to="/Input2">Input2</Link> | <Link to="/List">List</Link>
       </nav>
       <hr />
       <Routes>
@@ -28,6 +29,7 @@ function App() {
         <Route path="/Counter" element={<Counter />} />
         <Route path="/Input" element={<Input />} />
         <Route path="/Input2" element={<Input2 />} />
+        <Route path="/List" element={<List />} />
       </Routes>
       <hr />
     </div>
