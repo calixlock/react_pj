@@ -5,6 +5,7 @@ import { Link, Route, Routes } from "react-router-dom"; // route 관련 라이�
 import About from "./pages/About";
 import Counter from "./pages/Counter";
 import Home from "./pages/Home";
+import Input from "./pages/Input";
 
 function App() {
   return (
@@ -16,13 +17,14 @@ function App() {
         {/* <a href="/">Home</a> 동일 */}
         {/* Link는 a태그로 변환 적용 */}
         <Link to="/">Home</Link> | <Link to="/about">About</Link> |{" "}
-        <Link to="/Counter">Counter</Link>
+        <Link to="/Counter">Counter</Link> | <Link to="/Input">Input</Link>
       </nav>
       <hr />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/Counter" element={<Counter />} />
+        <Route path="/Input" element={<Input />} />
       </Routes>
       <hr />
     </div>
