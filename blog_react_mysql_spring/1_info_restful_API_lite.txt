@@ -1,0 +1,264 @@
+================================================================
+★1. Auth
+1-1. 로그인 signIn
+================================================================
+
+- url : POST /api/v1/auth/sign-up
+- request
+- response
+    * success
+        >> 성공 success : httpStatus - 200
+    * fail
+        >> 필수 정보 미입력(유효성 검사 실패) validation failed : httpStatus - 400
+        >> 로그인 실패 unAuthorized : httpStatus - 401
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+================================================================
+1-2. 회원가입 signUp
+================================================================
+- url : POST /api/v1/auth/sign-in
+- request
+- response
+    * success
+        >> 로그인 성공 Authorized : httpStatus - 200
+    * fail
+        >> 필수 정보 미입력(유효성 검사 실패) : Http Status - 400 (Bad Request) 
+        >> 중복 이메일 : Http Status - 400 (Bad Request) 
+        >> 중복 닉네임 : Http Status - 400 (Bad Request) 
+        >> 중복 전화번호 : Http Status - 400 (Bad Request) 
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+================================================================
+★2. Board
+2-1. 최신 게시물 currentList
+================================================================
+- url : GET /api/v1/board/current-list/{pageNumber}
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+================================================================
+2-2. 주간 상위 3 게시물 weeklyTop3List
+================================================================
+- url : GET /api/v1/board/top-3
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+================================================================
+2-3. 검색 게시물 리스트
+================================================================
+- url : GET /api/v1/board/search-list/{searchWord}
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+================================================================
+2-4. 특정 유저 게시물 리스트
+================================================================
+- url : GET /api/v1/board/user-board-list/{email}
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> 유저 없음 : httpStatus - 400 (Bad Request)
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+================================================================
+2-5. 게시물 상세보기
+================================================================
+- url : GET /api/v1/board/{boardNumber}
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> 게시물 없음 : httpStatus - 400 (Bad Request)
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+
+================================================================
+2-6. 좋아요 리스트
+================================================================
+- url : GET /api/v1/board/{boardNumber}/favorite-list
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+
+================================================================
+2-7. 댓글 리스트
+================================================================
+- url : GET /api/v1/board/{boardNumber}/comment-list
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+================================================================
+2-8. 게시물 작성
+================================================================
+- url : POST /api/v1/board
+- header : Authorization : Bearer Token
+- request
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> 필수 정보 미입력(유효성 검사 실패) : Http Status - 400 (Bad Request) 
+        >> 유저 없음 : httpStatus - 400 (Bad Request)
+        >> 인증 실패 : Http Status - 401 (Unauthorized)
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+================================================================
+2-9. 댓글 작성
+================================================================
+- url : POST /api/v1/board/comment
+- header : Authorization : Bearer Token
+- request
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> 필수 정보 미입력(유효성 검사 실패) : Http Status - 400 (Bad Request) 
+        >> 유저 없음 : httpStatus - 400 (Bad Request)
+        >> 게시물 없음 : httpStatus - 400 (Bad Request)
+        >> 인증 실패 : Http Status - 401 (Unauthorized)
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+================================================================
+2-9. 게시물 수정
+================================================================
+- url : PATCH /api/v1/board/{boardNumber}
+- header : Authorization : Bearer Token
+- request
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> 필수 정보 미입력(유효성 검사 실패) : Http Status - 400 (Bad Request) 
+        >> 유저 없음 : httpStatus - 400 (Bad Request)
+        >> 게시물 없음 : httpStatus - 400 (Bad Request)
+        >> 인증 실패 : Http Status - 401 (Unauthorized)
+        >> 권한 없음 : httpStatus - 403 (Forbidden)
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+================================================================
+2-10. 게시물 삭제
+================================================================
+- url : DELETE /api/v1/board/{boardNumber}
+- header : Authorization : Bearer Token
+- request
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> 필수 정보 미입력(유효성 검사 실패) : Http Status - 400 (Bad Request) 
+        >> 유저 없음 : httpStatus - 400 (Bad Request)
+        >> 게시물 없음 : httpStatus - 400 (Bad Request)
+        >> 인증 실패 : Http Status - 401 (Unauthorized)
+        >> 권한 없음 : httpStatus - 403 (Forbidden)
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+================================================================
+2-11. 좋아요 기능
+================================================================
+- url : PUT /api/v1/board/{boardNumber}/favorite
+- header : Authorization : Bearer Token
+- request
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> 필수 정보 미입력(유효성 검사 실패) : Http Status - 400 (Bad Request) 
+        >> 유저 없음 : httpStatus - 400 (Bad Request)
+        >> 게시물 없음 : httpStatus - 400 (Bad Request)
+        >> 인증 실패 : Http Status - 401 (Unauthorized)
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+================================================================
+★3. Search
+================================================================
+3-1. 인기 검색어 리스트
+- url : GET /api/v1/search/popular-list
+- request
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+================================================================
+3-2. 관련 검색어 리스트
+================================================================
+- url : GET /api/v1/search/{searchWord}/relation-list
+- request
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+================================================================
+★4. User
+4-1. 유저 정보
+================================================================
+- url : GET /api/v1/user/{email}
+- request
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> 유저 없음 : httpStatus - 400 (Bad Request)
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+================================================================
+4-2. 로그인 유저 정보
+================================================================
+- url : GET /api/v1/user
+- header : Authorization : Bearer Token
+- request
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> 유저 없음 : httpStatus - 400 (Bad Request)
+        >> 인증 실패 : Http Status - 401 (Unauthorized)
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+================================================================
+4-3. 닉네임 수정
+================================================================
+- url : PATCH /api/v1/user/name
+- header : Authorization : Bearer Token
+- request
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> 필수 정보 미입력(유효성 검사 실패) : Http Status - 400 (Bad Request) 
+        >> 유저 없음 : httpStatus - 400 (Bad Request)
+        >> 인증 실패 : Http Status - 401 (Unauthorized)
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+
+================================================================
+4-4. 프로필 이미지 수정
+================================================================
+- url : PATCH /api/v1/user/profile-image
+- header : Authorization : Bearer Token
+- request
+- response
+    * success
+        >> httpStatus - 200
+    * fail
+        >> 유저 없음 : httpStatus - 400 (Bad Request)
+        >> 인증 실패 : Http Status - 401 (Unauthorized)
+        >> DB 에러 : httpStatus - 500 (Internal Server Error)
+================================================================
+
