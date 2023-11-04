@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { useState } from "react";
-import "./App.css";
+import "../App.css";
 
 //callback 적용 >> 불필요한 불러오기(=같은 작업 반복) 방지
 const heavyWork = () => {
@@ -13,7 +13,7 @@ const heavyWork = () => {
   return ["홍길동", "라인"];
 };
 
-function ex_useState() {
+function Ex_useState() {
   // count : 함수 및 설정
   const [count, setCount] = useState(0);
   const upClick = () => {
@@ -68,4 +68,4 @@ function ex_useState() {
   );
 }
 
-export default ex_useState;
+export default Ex_useState;
