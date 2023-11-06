@@ -31,6 +31,11 @@ function Navbar() {
                 Ex_useEffect
               </a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/useEffectCleanUp">
+                Ex_useEffect_cleanUpdate
+              </a>
+            </li>
             {/* <li className="nav-item">
               <a className="nav-link disabled" aria-disabled="true">
                 Disabled

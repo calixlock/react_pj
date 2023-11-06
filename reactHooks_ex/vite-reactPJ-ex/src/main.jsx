@@ -2,7 +2,7 @@
 import ReactDOM from "react-dom/client";
 import Navbar from "./Navbar.jsx";
 import Routing from "./Routing.jsx";
-import "./index.css";
+// import "./index.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   // <React.StrictMode>
   <div>
