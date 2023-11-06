@@ -4,7 +4,15 @@ reactHooks 관련
 >
 > - https://www.youtube.com/watch?v=G3qglTF-fFI&list=PLZ5oZ2KmQEYjwhSxjB_74PoU6pmFzgVMO&index=1&t=169s
 
+---
+
 ## react_docs
+
+### hooks api
+
+> https://ko.legacy.reactjs.org/docs/hooks-reference.html
+
+---
 
 ### useState
 
@@ -17,7 +25,3 @@ reactHooks 관련
 ### useRef
 
 > https://ko.legacy.reactjs.org/docs/hooks-intro.html
-
-### hooks api
-
-> https://ko.legacy.reactjs.org/docs/hooks-reference.html
