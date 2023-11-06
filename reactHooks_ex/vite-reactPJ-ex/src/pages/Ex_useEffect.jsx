@@ -1,6 +1,8 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// state 변화 > 렌더링 > 컴포넌트 내부 변수들 초기화
+
 import { useEffect, useState } from "react";
 // import "../App.css";
 function Ex_useEffect() {
