@@ -1,1 +1,22 @@
-@import "reset.css";
+@import "./reset.css";
+
+.root-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  border: 1px red solid;
+}
+.header-container {
+  background-color: grey;
+}
+.header-wrap {
+  height: 64px;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.header-left-wrap li {
+  margin: 0 10px;
+}
