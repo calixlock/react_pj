@@ -10,15 +10,17 @@ import Tv from "./pages/Tv";
 
 export default function Router() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/movie" element={<Movies />} />
-        <Route path="/person" element={<Celebrity />} />
-        <Route path="/tv" element={<Tv />} />
-        <Route path="/*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="root-wrap">
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movie" element={<Movies />} />
+          <Route path="/person" element={<Celebrity />} />
+          <Route path="/tv" element={<Tv />} />
+          <Route path="/*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
