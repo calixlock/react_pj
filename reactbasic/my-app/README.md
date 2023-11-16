@@ -1,3 +1,7 @@
+## 참고
+
+> https://www.youtube.com/watch?v=qcphnSqneE0&list=PLKvVQ9ZQzjVkP0xd30Zi90P4S_rTlm-LH&index=1&t=15s
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

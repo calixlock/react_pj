@@ -18,6 +18,7 @@ export default function Router() {
           <Route path="/person" element={<Celebrity />} />
           <Route path="/tv" element={<Tv />} />
           <Route path="/*" element={<NotFound />} />
+          
         </Routes>
       </BrowserRouter>
     </div>
