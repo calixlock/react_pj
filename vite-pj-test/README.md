@@ -6,7 +6,7 @@
 
 > https://www.youtube.com/watch?v=TFLvKGhrAwM&list=PLKvVQ9ZQzjVkP0xd30Zi90P4S_rTlm-LH&index=5
 
-### Todo List -simple App
+### Todo List - simple App
 
 > https://www.youtube.com/watch?v=TjUju3aUIDM&list=PLKvVQ9ZQzjVkP0xd30Zi90P4S_rTlm-LH&index=5
 
