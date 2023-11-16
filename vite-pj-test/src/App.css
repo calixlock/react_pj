@@ -1,4 +1,4 @@
-/* 초기 App css 설정 off */
+@import "./style/todoList.css"; /* 초기 App css 설정 off */
 /* #root {
   max-width: 1280px;
   margin: 0 auto;
