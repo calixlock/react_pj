@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Naver Login Example</title>
+  <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"></script>
+</head>
+
+<body>
+  <button id="naver-login-button">Naver 로그인</button>
+
+  <script>
+    // Naver 로그인 객체를 생성합니다.
+    var naverLogin = new naver.LoginWithNaverId(
+      {
+        clientId: "YOUR_CLIENT_ID",
+        callbackUrl: "YOUR_CALLBACK_URL",
+        isPopup: false,
+      });
+
+    // Naver 로그인 버튼을 초기화합니다.
+    naverLogin.init();
+
+    // 사용자가 로그인 버튼을 클릭하면 Naver 로그인 페이지로 리다이렉트합니다.
+    document.getElementById("naver-login-button").onclick = function () {
+      naverLogin.reprompt();
+    };
+  </script>
+</body>
+
+</html>
