@@ -26,14 +26,16 @@ const foodList = [
       "https://cdn.pixabay.com/photo/2019/02/04/06/45/apple-3974055_1280.jpg",
   },
 ];
+const renderFood = (item, idx) => (
+  <Food key={idx} name={item.name} idx={idx} img={item.image} />
+);
+
 function App() {
-  // return <div className="App" />;
+  console.log(foodList.map(renderFood));
   return (
     <div>
       <h1>Food List</h1>
-      {foodList.map((item, idx) => (
-        <Food key={idx} name={item.name} idx={idx} img={item.image} />
-      ))}
+      {foodList.map(renderFood)}
     </div>
   );
 }
