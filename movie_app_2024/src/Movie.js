@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-
-const Movie = ({ id, year, title, summary, poster }) => {
+import "./Movie.css";
+const Movie = ({ year, title, summary, poster }) => {
   return (
     <div class="movie_data">
       <img src={poster} alt={title} title={title} />
@@ -13,7 +13,6 @@ const Movie = ({ id, year, title, summary, poster }) => {
 };
 // props의 데이터 유효성 체크
 Movie.propTypes = {
-  id: PropTypes.number.isRequired,
   year: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
