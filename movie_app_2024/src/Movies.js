@@ -2,11 +2,10 @@ import PropTypes from "prop-types";
 
 const Movie = ({ id, year, title, summary, poster }) => {
   return (
-    <div>
-      <h4>id : {id}</h4>
-      <h4>year : {year}</h4>
-      <h4>title : {title}</h4>
-      {/* <h4>summary : {summary}</h4> */}
+    <div class="movie_data">
+      <h3 class="movie_title">title : {title}</h3>
+      <h5 class="movie_year">year : {year}</h5>
+      <p class="movie_summary">summary : {summary}</p>
       {/* <h4>poster : {poster}</h4> */}
       <hr />
     </div>
