@@ -2,12 +2,18 @@ import PropTypes from "prop-types";
 import "./Movie.css";
 const Movie = ({ year, title, summary, poster, genres }) => {
   return (
-    <div class="movie_data">
+    <div className="movie_data">
       <img src={poster} alt={title} title={title} />
-      <h3 class="movie_title">title : {title}</h3>
-      <h5 class="movie_genre">genre : {genres}</h5>
-      <h5 class="movie_year">year : {year}</h5>
-      <p class="movie_summary">summary : {summary}</p>
+      <h3 className="movie_title">title : {title}</h3>
+      {/* <h5 className="movie_genre">genre : {genres}</h5> */}
+      <ul className="movie_genres">
+        {genres.map((e) => {
+          return <li className="movie_genre">{e}</li>;
+        })}
+      </ul>
+
+      <h5 className="movie_year">year : {year}</h5>
+      <p className="movie_summary">summary : {summary}</p>
       <hr />
     </div>
   );
