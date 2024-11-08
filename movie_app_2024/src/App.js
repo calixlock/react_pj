@@ -1,5 +1,7 @@
 import axios from "axios";
 import React from "react";
+import Movie from "./Movies";
+
 class App extends React.Component {
   state = {
     isLoading: 1,
@@ -12,9 +14,11 @@ class App extends React.Component {
       data: {
         data: { movies },
       },
-    } = await axios.get("https://yts-proxy.now.sh/list_movies.json");
+    } = await axios.get(
+      "https://yts-proxy.now.sh/list_movies.json?sort_by=rating"
+    );
     console.log(movies);
-    // this.setState({ movies: movies });
+    // this.setState({ movies: movies }); => this.setState({ movies }); 축약가능
     this.setState({ movies, isLoading: 0 });
   };
   componentDidMount() {
@@ -22,7 +26,23 @@ class App extends React.Component {
   }
   render() {
     const { isLoading, movies } = this.state;
-    return <div>{isLoading ? "Loading..." : "movies"}</div>;
+    return (
+      <div>
+        {isLoading
+          ? "Loading..."
+          : movies.map((movie) => {
+              return (
+                <Movie
+                  id={movie.id}
+                  year={movie.year}
+                  title={movie.title}
+                  summary={movie.summary}
+                  poster={movie.poster}
+                />
+              );
+            })}
+      </div>
+    );
   }
 }
 export default App;
