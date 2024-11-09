@@ -3,6 +3,8 @@ import "./Movie.css";
 const Movie = ({ year, title, summary, poster, genres }) => {
   return (
     <div className="movie">
+      <hr />
+      <br />
       <img src={poster} alt={title} title={title} />
       <h3 className="movie_title">{title}</h3>
       {/* <h5 className="movie_genre">genre : {genres}</h5> */}
@@ -16,8 +18,9 @@ const Movie = ({ year, title, summary, poster, genres }) => {
         })}
       </ul>
 
-      <h5 className="movie_year">year : {year}</h5>
-      <p className="movie_summary">summary : {summary.slice(0, 100)}...</p>
+      <h5 className="movie_year">{year}</h5>
+      <p className="movie_summary">{summary.slice(0, 100)}...</p>
+
       <hr />
     </div>
   );
