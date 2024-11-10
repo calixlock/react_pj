@@ -38,5 +38,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://github.com/calixlock/react_pj/tree/main/movie_app_2024"
+  "homepage": "https://calixlock.github.io/movie_app_2024",
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
+  }
 }

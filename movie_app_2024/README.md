@@ -2,7 +2,7 @@
 
 > ### Movie App 2024
 
-> start : 2024.11.06 ~
+> start / end : 2024.11.06 / 2024.11.10
 
 #### Movie api
 
@@ -14,3 +14,7 @@
 
 - https://nomadcoders.co/courses
 - https://github.com/easysIT/do_it_clonecoding_movieapp
+
+#### Result
+
+- https://calixlock.github.io/movie_app_2024/

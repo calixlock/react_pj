@@ -4,7 +4,10 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter future={{ v7_relativeSplatPath: true }}>
+  <BrowserRouter
+    future={{ v7_relativeSplatPath: true }}
+    basename={process.env.PUBLIC_URL}
+  >
     <App />
   </BrowserRouter>
 );
