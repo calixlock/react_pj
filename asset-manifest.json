@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/calixlock/react_pj/tree/main/movie_app_2024/static/css/main.cef023f1.css",
+    "main.js": "/calixlock/react_pj/tree/main/movie_app_2024/static/js/main.3a6792fc.js",
+    "index.html": "/calixlock/react_pj/tree/main/movie_app_2024/index.html",
+    "main.cef023f1.css.map": "/calixlock/react_pj/tree/main/movie_app_2024/static/css/main.cef023f1.css.map",
+    "main.3a6792fc.js.map": "/calixlock/react_pj/tree/main/movie_app_2024/static/js/main.3a6792fc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cef023f1.css",
+    "static/js/main.3a6792fc.js"
+  ]
+}
