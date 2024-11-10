@@ -15,6 +15,6 @@
 - https://nomadcoders.co/courses
 - https://github.com/easysIT/do_it_clonecoding_movieapp
 
-#### Result
+#### Result deploy
 
 - https://calixlock.github.io/movie_app_2024/
