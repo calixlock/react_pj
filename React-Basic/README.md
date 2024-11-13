@@ -1,3 +1,8 @@
+## 참고영상
+
+- 9Diin : https://www.youtube.com/watch?v=Yv5tSNr4h2c
+  - git : https://github.com/son7ae
+
 ## 개발환경
 
 ```bash
